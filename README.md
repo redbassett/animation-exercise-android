@@ -7,7 +7,7 @@
     ```
     git checkout -b <your-name>/add-animations
     ```
-3. Download the animation movie files from Google Drive and watch them. Add those animations to the app while preserving all functionality. You'll probably want to start with modifying the three methods marked by the TODOs.
+3. Download the animation movie files from the `animation_movies` folder and watch them. Add those animations to the app while preserving all functionality. You'll probably want to start with modifying the three methods marked by the TODOs in `DetailActivity` and `OverviewActivity`.
 
 4. Commit and push your branch up to Github
 
