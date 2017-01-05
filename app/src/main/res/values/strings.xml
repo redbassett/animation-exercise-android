@@ -1,0 +1,15 @@
+<resources>
+    <string name="common_ok">OK</string>
+    <string name="common_yes">Yes</string>
+    <string name="common_no">No</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_delete">Delete</string>
+    <string name="common_remove">Remove</string>
+
+    <string name="app_name">Animationintro</string>
+    <string name="look_at_these_cats">Look at these cats!</string>
+    <string name="cat_my_name_is">This cat\'s name is %s</string>
+    <string name="cats_are_so_cool">Check out these cool cats!</string>
+    <string name="tap_to_see_cat">Tap to see cat</string>
+    <string name="cat_instructions">Tap the cat to power up!</string>
+</resources>
