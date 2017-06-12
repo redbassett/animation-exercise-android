@@ -18,13 +18,13 @@ ext.getLocalProperty = { propertyName ->
 }
 
 android {
-    compileSdkVersion 24
+    compileSdkVersion 25
     buildToolsVersion "25.0.2"
 
     defaultConfig {
         applicationId "io.intrepid.animationexercise"
         minSdkVersion 17
-        targetSdkVersion 24
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
 
@@ -95,14 +95,14 @@ dependencies {
     }
 
     // Support libraries
-    def supportVersion = "24.2.1";
+    def supportVersion = "25.3.1";
     compile "com.android.support:support-v4:$supportVersion"
     compile "com.android.support:appcompat-v7:$supportVersion"
     compile "com.android.support:recyclerview-v7:$supportVersion"
     compile "com.android.support:design:$supportVersion"
 
     // Google play services
-    def googlePlayVersion = "10.0.1";
+    def googlePlayVersion = "11.0.0";
     compile "com.google.android.gms:play-services-base:$googlePlayVersion"
 
     // Rx
