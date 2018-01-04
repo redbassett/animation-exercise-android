@@ -6,13 +6,9 @@ import io.intrepid.animationexercise.base.BasePresenter;
 import io.intrepid.animationexercise.base.PresenterConfiguration;
 import io.intrepid.animationexercise.models.Cat;
 import io.intrepid.animationexercise.utils.DataUtils;
-import io.intrepid.animationexercise.utils.RxUtils;
-import rx.Subscription;
 
 
 class OverviewPresenter extends BasePresenter<OverviewContract.View> implements OverviewContract.Presenter {
-
-    private static final int CAT_PAGE_SIZE = 20;
 
     OverviewPresenter(@NonNull OverviewContract.View view, @NonNull PresenterConfiguration configuration) {
         super(view, configuration);
@@ -31,13 +27,7 @@ class OverviewPresenter extends BasePresenter<OverviewContract.View> implements 
             view.onCatsLoaded(DataUtils.getData());
             view.toggleLoadingSpinner(false);
         } else {
-            Subscription loadCats = restApi.getCats(CAT_PAGE_SIZE, "xml", "jpg,png")
-                    .compose(subscribeOnIoObserveOnUi())
-                    .subscribe((catResponse) -> {
-                        view.onCatsLoaded(catResponse.getCats());
-                        view.toggleLoadingSpinner(false);
-                    }, RxUtils.logError());
-            subscriptions.add(loadCats);
+            throw new UnsupportedOperationException("Only dummy data allowed for this exercise");
         }
     }
 

@@ -3,8 +3,6 @@ package io.intrepid.animationexercise.base;
 import android.support.annotation.NonNull;
 
 import io.intrepid.animationexercise.logging.CrashReporter;
-import io.intrepid.animationexercise.rest.RestApi;
-import io.intrepid.animationexercise.settings.UserSettings;
 import rx.Observable;
 import rx.Scheduler;
 import rx.subscriptions.CompositeSubscription;
@@ -19,10 +17,6 @@ public abstract class BasePresenter<T extends BaseContract.View> implements Base
     @NonNull
     protected final Scheduler uiScheduler;
     @NonNull
-    protected final UserSettings userSettings;
-    @NonNull
-    protected final RestApi restApi;
-    @NonNull
     protected final CrashReporter crashReporter;
 
     private boolean isViewBound = false;
@@ -31,8 +25,6 @@ public abstract class BasePresenter<T extends BaseContract.View> implements Base
         this.view = view;
         this.ioScheduler = configuration.getIoScheduler();
         this.uiScheduler = configuration.getUiScheduler();
-        this.userSettings = configuration.getUserSettings();
-        this.restApi = configuration.getRestApi();
         this.crashReporter = configuration.getCrashReporter();
     }
 
