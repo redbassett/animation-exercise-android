@@ -1,6 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
-apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'spoon'
 apply from: 'version.gradle'
 apply from: 'coverage.gradle'
@@ -19,7 +17,7 @@ ext.getLocalProperty = { propertyName ->
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "io.intrepid.animationexercise"
@@ -131,7 +129,7 @@ dependencies {
 
     def butterKnifeVersion = "8.4.0"
     compile "com.jakewharton:butterknife:$butterKnifeVersion"
-    apt "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
     compile 'com.jakewharton.timber:timber:4.3.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
 
