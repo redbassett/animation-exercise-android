@@ -5,6 +5,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import java.util.List;
@@ -52,7 +54,25 @@ public class OverviewActivity extends BaseMvpActivity<OverviewContract.Presenter
     //TODO: complete this method
     @Override
     public void goToCatDetail(Cat cat) {
-        startActivity(DetailActivity.getStartIntent(this, cat));
+        Animation iconOutAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_out_right);
+        iconOutAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                startActivity(DetailActivity.getStartIntent(OverviewActivity.this, cat));
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        
+        catImageView.startAnimation(iconOutAnimation);
     }
 
     @Override
