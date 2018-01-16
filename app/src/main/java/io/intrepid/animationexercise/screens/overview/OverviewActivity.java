@@ -64,6 +64,7 @@ public class OverviewActivity extends BaseMvpActivity<OverviewContract.Presenter
             @Override
             public void onAnimationEnd(Animation animation) {
                 startActivity(DetailActivity.getStartIntent(OverviewActivity.this, cat));
+                catImageView.setVisibility(View.INVISIBLE);
             }
 
             @Override
@@ -71,7 +72,7 @@ public class OverviewActivity extends BaseMvpActivity<OverviewContract.Presenter
 
             }
         });
-        
+
         catImageView.startAnimation(iconOutAnimation);
     }
 
